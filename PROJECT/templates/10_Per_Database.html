@@ -1,0 +1,111 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+      
+                [role="table"] {
+                display: table;
+                margin: 10px auto 40px;
+                width: min(600px, 95%);
+                border-radius: 8px;
+                border: 1px solid rgb(51, 211, 59);
+                border-top: 0;
+                box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+                box-sizing: border-box;
+                font: 400 1.0625em/1 "Segoe UI", "Roboto", "Liberation Sans", Arial, sans-serif;
+                overflow: hidden;
+                }
+
+                [role="table"] > div[id] {
+                display: table-caption;
+                font-style: italic;
+                }
+
+                [role="table"] [role="row"] {
+                display: table-row;
+                transition: background-color 300ms linear;
+                }
+                .gradient [role="row"]:hover {
+                background:#5e28db;
+                color:#FFFFFF;
+                font-weight: 350;
+                letter-spacing: .015em;
+                }
+                @media screen and (max-width:500px) {
+                [role="table"] [role="row"] span+span {width: 28%;}
+                }
+
+                [role="table"] [role="cell"],
+                [role="table"] [role="columnheader"] {
+                display: table-cell;
+                padding: clamp(0.25em,4vw,1em);
+                width: 20em;
+                }
+
+                [role="table"] [role="columnheader"] {
+                background: linear-gradient(165deg,rgb(44, 192, 192),#062006);
+                color: #fafafa;
+                border-bottom: 3px solid black;
+                font-weight: bold;
+                border-bottom: thin solid #888;
+                border-radius: 6px 6px 0 0;
+                }
+
+                [role="table"] h3 {margin-top: 0;}
+                /***  Color de fondo para las filas alternas (pares o impares)
+                [role="table"] [role="rowgroup"]:last-child [role="row"]:nth-child(odd) {
+                background-color: rgba(0, 0, 0, 0.2);
+                }
+                ***/
+                .gradient {
+                background: #54c029;
+                background: -moz-linear-gradient(top, rgb(0, 102, 255) 0%, #8ED433 100%);
+                background: -webkit-linear-gradient(top, #ffff00 0%,#40e6cf 100%);
+                background: linear-gradient(to bottom, #3cc4d6 0%,#2c88bd 100%);
+                filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffff00', endColorstr='#8ed433',GradientType=0 );
+                border-radius: 0 0 6px 6px;
+                }
+    </style>
+</head>
+<body>
+    <div role="table" aria-label="Students" aria-describedby="students_table_desc">
+        <div id="students_table_desc">
+          <center><h1>PERSONAL INFORMATIONS DATABASE</h1></center>
+        </div>
+
+        <div role="rowgroup">
+           <div role="row">
+             <span role="columnheader">FIRST_NAME</span>
+             <span role="columnheader">LAST_NAME</span>
+             <span role="columnheader">AGE</span>
+             <span role="columnheader">ADDRESS</span>
+             <span role="columnheader">PHONE</span>
+             <span role="columnheader">CITY</span>
+             <span role="columnheader">STATE</span>
+             <span role="columnheader">NATIONALITY</span>
+
+            </div>
+        </div>
+
+        {% for model in models %}
+        <div role="rowgroup" class="gradient">
+            <div role="row">
+              <span role="cell">{{ model.firstname }}</span>
+              <span role="cell">{{ model.lastname }}</span>
+              <span role="cell">{{ model.age }}</span>
+              <span role="cell">{{ model.address }}</span>
+              <span role="cell">{{ model.phone }}</span>
+              <span role="cell">{{ model.city }}</span>
+              <span role="cell">{{ model.state }}</span>
+              <span role="cell">{{ model.country }}</span>
+            </div>
+        {% endfor %}
+
+        </div>
+</body>
+</html>

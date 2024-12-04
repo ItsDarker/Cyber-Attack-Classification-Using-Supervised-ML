@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: sans-serif;
+      background: transparent;
+      background-color: transparent;
+
+    }
+
+    p {
+      color: black;
+    }
+
+    h1 {
+      font-size: 40px;
+      color: white;
+    }
+
+    .menu1 {
+      padding: 15px;
+    }
+
+    .input1 {
+      padding: 10px;
+      margin-left: 40px;
+      margin-right: 40px;
+      width: 225px;
+      text-align: center;
+      border-radius: 25px;
+    }
+
+    input[type=text],
+    select {
+      width: 40%;
+      padding: 12px 20px;
+      margin: 8px 0;
+      display: inline-block;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
+
+    input[type=password],
+    select {
+      width: 40%;
+      padding: 12px 20px;
+      margin: 8px 0;
+      display: inline-block;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
+
+    input[type=email],
+    select {
+      width: 40%;
+      padding: 12px 20px;
+      margin: 8px 0;
+      display: inline-block;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
+
+    input[type=date],
+    select {
+      width: 40%;
+      padding: 12px 20px;
+      margin: 8px 0;
+      display: inline-block;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
+
+    input[type=submit] {
+      width: 40%;
+      background-color: #4CAF50;
+      color: white;
+      padding: 14px 20px;
+      margin: 8px 0;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    input[type=submit]:hover {
+      background-color: #073e00;
+    }
+
+    .button {
+      background-color: #4CAF50;
+      /* Green */
+      border: none;
+      color: white;
+      padding: 16px 32px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      margin: 4px 2px;
+      -webkit-transition-duration: 0.4s;
+      /* Safari */
+      transition-duration: 0.4s;
+      cursor: pointer;
+      padding-left: 25px;
+    }
+
+    .button {
+      width: 100%;
+      background-color: #ff9800;
+      color: #ff9800;
+      padding: 14px 20px;
+      margin: 8px 0;
+      border: none;
+      border-radius: 34px;
+      cursor: pointer;
+    }
+
+    .buttons {
+      width: 40%;
+      background-color: #ff9800;
+      color: #ff9800;
+      padding: 14px 20px;
+      margin: 8px 0;
+      border: none;
+      border-radius: 34px;
+      cursor: pointer;
+    }
+
+    .button1 {
+      background-color: rgb(32, 83, 192);
+      color: white;
+    }
+
+    .button1:hover {
+      background-color: rgb(22, 164, 199);
+      color: white;
+    }
+
+    .results-container {
+      max-width: 800px;
+      margin: 20px auto;
+      padding: 20px;
+      background: rgba(255, 255, 255, 0.9);
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      text-align: center;
+    }
+
+    .result-heading {
+      font-size: 1.8em;
+      color: #333;
+      margin-bottom: 15px;
+      font-weight: bold;
+    }
+
+    .result-content {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 20px;
+    }
+
+    .result-text {
+      flex: 1;
+      text-align: left;
+    }
+
+    .result-text h5 {
+      font-size: 1.4em;
+      color: #444;
+      margin-bottom: 10px;
+    }
+
+    .result-text p {
+      font-size: 1.1em;
+      color: #555;
+      line-height: 1.5;
+    }
+
+    .result-images {
+      flex: 1;
+      text-align: center;
+    }
+
+    .result-image {
+      max-width: 100%;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+      margin-top: 10px;
+    }
+
+    .login {
+      border: none;
+      border-radius: 1.5rem;
+      background: #f8f8f8;
+      font-weight: 600;
+      color: #f8f8f8;
+      margin-top: 20px;
+      padding: 50px;
+      float: right;
+      border-top-left-radius: 40% 50%;
+      border-bottom-left-radius: 5% 50%;
+      padding-left: 100px;
+      padding-right: 80px;
+    }
+
+    div {
+      background-color: transparent;
+      padding: 20px;
+      padding-left: 40px;
+    }
+
+    .log {
+      background-color: #333;
+      border-radius: 14px;
+      padding: 25px;
+      padding-left: 45px;
+      padding-right: 0px;
+    }
+
+    .bleu:link,
+    .bleu:visited {
+      background-color: #00264d;
+      color: #fff;
+      padding: 8px 10px;
+      border-radius: 15px;
+      text-decoration: none;
+      display: inline-block;
+    }
+
+    .bleu:hover,
+    .bleu:active {
+      border-color: #48dbfb;
+      color: #fff;
+      background-color: black;
+    }
+
+    ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      background-color: #333;
+    }
+
+    li {
+      float: left;
+    }
+
+    li a {
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+    }
+
+    li a:hover:not(.active) {
+      background-color: #111;
+    }
+
+    .active {
+      background-color: #2a89e2;
+    }
+
+    #acc {
+      background-image: url("/static/images/S3.jpg");
+
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-size: 100% 100%;
+    }
+
+    /* Modal styles */
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 1000;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgba(0, 0, 0, 0.8);
+    }
+
+    .modal-content {
+      margin: auto;
+      display: block;
+      max-width: 90%;
+      max-height: 90%;
+    }
+
+    .modal-content:hover {
+      cursor: zoom-out;
+    }
+
+    .close {
+      position: absolute;
+      top: 20px;
+      right: 35px;
+      color: white;
+      font-size: 30px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .close:hover,
+    .close:focus {
+      color: #bbb;
+      text-decoration: none;
+      cursor: pointer;
+    }
+  </style>
+  <script>
+    function openModal(image) {
+      const modal = document.getElementById('imageModal');
+      const modalImage = document.getElementById('zoomedImage');
+      const caption = document.getElementById('caption');
+
+      modal.style.display = 'block';
+      modalImage.src = image.src;
+      caption.innerHTML = image.alt;
+    }
+
+    function closeModal() {
+      const modal = document.getElementById('imageModal');
+      modal.style.display = 'none';
+    }
+
+    // Close modal on click outside image
+    window.onclick = function (event) {
+      const modal = document.getElementById('imageModal');
+      if (event.target === modal) {
+        modal.style.display = 'none';
+      }
+    };
+  </script>
+
+</head>
+
+<body>
+  <html>
+
+  <head>
+    <meta charset="utf-8">
+    <title>home</title>
+    <meta name="viewport"
+      content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  </head>
+
+  <body id="acc">
+    <div>
+      <center>
+        <h1><label>NETWORK ATTACKS CLASSIFICATION USING SUPERVISED MACHINE LEARNING TECHNIQUES</label></h1>
+      </center>
+      <div class="results-container" style="{% if not show_result %}display:none;{% endif %}">
+        <h4 class="result-heading">Prediction Results</h4>
+        <div class="result-content">
+          <div class="result-text">
+            <h5>{{ prediction_text }}</h5>
+            <p>{{ B }}</p>
+          </div>
+          <div class="result-images">
+            <img src="{{ image_url }}" alt="Result Image" class="result-image zoomable" onclick="openModal(this)">
+            <h5>Prevention Diagram</h5>
+            <img src="{{ prevention_img }}" alt="Prevention Image" class="result-image zoomable" onclick="openModal(this)">
+          </div>
+        </div>
+      </div>
+      
+      <!-- Modal for Zooming -->
+      <div id="imageModal" class="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img class="modal-content" id="zoomedImage">
+        <div id="caption"></div>
+      </div>
+      <!-- </div>
+    <center><button type="submit" style="width:150px;padding:10px"><a href="{% url 'Home_4' %}">HOME</a></button>
+    </center>
+    <div class="login">
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <h4><label style="color: rgb(10, 140, 150); font-size: 40px;">RESULT</label></h4>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <h3 style="font-size: 20px; color: rgb(218, 31, 31);"><label required style="
+                        width: 100%;
+                        padding: 12px 12px;
+                        margin: 0px 0px;
+                        display: inline-block;
+                        border-radius: 10px;
+                        box-sizing: border-box;">{{ prediction_text }}</h3>
+      <p style="font-size: 20px;"><label required style="
+                  width: 100%;
+                  padding: 12px 12px;
+                 
+                  margin: 0px 0px;
+                  display: inline-block;
+                  border-radius: 10px;
+                  box-sizing: border-box;">{{ B }}</p>
+       <img src="{{ image_url }}" alt="Image for Output {{ output }}" style="display: inline-block; width: 45%; margin-right: 5px;">
+       <h4 style="color: black; font-size: 24px;">Prevention Diagram</h4>
+       <img src="{{ prevention_img }}" alt="Prevention Image {{ output }}" style="display: inline-block; width: 45%;">
+
+    </div> -->
+      <div>
+        <form method="post" action="{% url 'Deploy_9' %}" class="">
+          {% csrf_token %}
+          <p><label style="color: white">FWT_TOT</label></p>
+          <p><input type="text" name="FWT_TOT" required style="
+                width: 40%;
+                padding: 12px 20px;
+                margin: 0px 0px;
+                display: inline-block;
+                border-radius: 40px;
+                box-sizing: border-box;" value="1">
+          </p>
+
+
+
+          <p><label style="color: white">PORT</label></p>
+          <p><input type="text" name="PORT" required style="
+                        width: 40%;
+                        padding: 12px 20px;
+                        margin: 0px 0px;
+                        display: inline-block;
+                        border-radius: 40px;
+                        box-sizing: border-box;" value="1">
+          </p>
+
+          <p><label style="color: white">PROCOLS</label></p>
+          <p><input type="text" name="PROCOLS" required style="
+                        width: 40%;
+                        padding: 12px 20px;
+                        margin: 0px 0px;
+                        display: inline-block;
+                        border-radius: 40px;
+                        box-sizing: border-box;" value="38171">
+          </p>
+
+          <p><label style="color: white">TTPE</label></p>
+          <p><select type="text" name="TTPE" required style="
+                        width: 40%;
+                        padding: 12px 20px;
+                        margin: 0px 0px;
+                        display: inline-block;
+                        border-radius: 40px;
+                        box-sizing: border-box;">
+              <option value="0">ICMP</option>
+              <option value="1" selected>TCP</option>
+              <option value="2">UDP</option>
+            </select>
+          </p>
+
+          <p><label style="color: white">SERVICE</label></p>
+          <p><select type="text" name="SERVICE" required style="
+                        width: 40%;
+                        padding: 12px 20px;
+                        margin: 0px 0px;
+                        display: inline-block;
+                        border-radius: 40px;
+                        box-sizing: border-box;">
+              <option value="0">-</option>
+              <option value="1">DHCP</option>
+              <option value="2">DNS</option>
+              <option value="3">HTTP</option>
+              <option value="4">IRC</option>
+              <option value="5">MQTT</option>
+              <option value="6">NTP</option>
+              <option value="7">RADIS</option>
+              <option value="8">SSH</option>
+              <option value="9">SSL</option>
+
+            </select>
+          </p>
+
+          <p><label style="color: white">FLOW_DURATION</label></p>
+          <p><input type="text" name="FLOW_DURATION" required style="
+                        width: 40%;
+                        padding: 12px 20px;
+                        margin: 0px 0px;
+                        display: inline-block;
+                        border-radius: 40px;
+                        box-sizing: border-box;" value="1.00E-06">
+          </p>
+
+          <p><label style="color: white">BWD_TOT</label></p>
+          <p><input type="text" name="BWD_TOT" required style="
+                        width: 40%;
+                        padding: 12px 20px;
+                        margin: 0px 0px;
+                        display: inline-block;
+                        border-radius: 40px;
+                        box-sizing: border-box;" value="1">
+          </p>
+
+          <p><label style="color: white">FWT_DATA</label></p>
+          <p><input type="text" name="FWT_DATA" required style="
+                        width: 40%;
+                        padding: 12px 20px;
+                        margin: 0px 0px;
+                        display: inline-block;
+                        border-radius: 40px;
+                        box-sizing: border-box;" value="1">
+          </p>
+
+          <p><label style="color: white">BWD_DATA</label></p>
+          <p><input type="text" name="BWD_DATA" required style="
+                        width: 40%;
+                        padding: 12px 20px;
+                        margin: 0px 0px;
+                        display: inline-block;
+                        border-radius: 40px;
+                        box-sizing: border-box;" value="0">
+          </p>
+
+          <p><label style="color: white">DOWN_UP_RATION</label></p>
+          <p><input type="text" name="DOWN_UP_RATION" required style="
+                        width: 40%;
+                        padding: 12px 20px;
+                        margin: 0px 0px;
+                        display: inline-block;
+                        border-radius: 40px;
+                        box-sizing: border-box;" value="1">
+          </p>
+
+
+          <p><label style="color: white">FWD_SIZE</label></p>
+          <p><input type="text" name="FWD_SIZE" required style="
+                        width: 40%;
+                        padding: 12px 20px;
+                        margin: 0px 0px;
+                        display: inline-block;
+                        border-radius: 40px;
+                        box-sizing: border-box;" value="20">
+          </p>
+
+          <p><label style="color: white">BWD_SIZE</label></p>
+          <p><input type="text" name="BWD_SIZE" required style="
+                        width: 40%;
+                        padding: 12px 20px;
+                        margin: 0px 0px;
+                        display: inline-block;
+                        border-radius: 40px;
+                        box-sizing: border-box;" value="20">
+          </p>
+
+
+          <p><label style="color: white">FNN_FLAG</label></p>
+          <p><input type="text" name="FNN_FLAG" required style="
+                        width: 40%;
+                        padding: 12px 20px;
+                        margin: 0px 0px;
+                        display: inline-block;
+                        border-radius: 40px;
+                        box-sizing: border-box;" value="0">
+          </p>
+
+          <p><label style="color: white">SYN_FLAG</label></p>
+          <p><input type="text" name="SYN_FLAG" required style="
+                        width: 40%;
+                        padding: 12px 20px;
+                        margin: 0px 0px;
+                        display: inline-block;
+                        border-radius: 40px;
+                        box-sizing: border-box;" value="1">
+          </p>
+
+
+          <p><label style="color: white">RST_FLAG</label></p>
+          <p><input type="text" name="RST_FLAG" required style="
+                        width: 40%;
+                        padding: 12px 20px;
+                        margin: 0px 0px;
+                        display: inline-block;
+                        border-radius: 40px;
+                        box-sizing: border-box;" value="1">
+          </p>
+
+          <p><label style="color: white">PSH_FLAG</label></p>
+          <p><input type="text" name="PSH_FLAG" required style="
+                        width: 40%;
+                        padding: 12px 20px;
+                        margin: 0px 0px;
+                        display: inline-block;
+                        border-radius: 40px;
+                        box-sizing: border-box;" value="0">
+          </p>
+
+
+          <p><label style="color: white">ACK_FLAG</label></p>
+          <p><input type="text" name="ACK_FLAG" required style="
+                        width: 40%;
+                        padding: 12px 20px;
+                        margin: 0px 0px;
+                        display: inline-block;
+                        border-radius: 40px;
+                        box-sizing: border-box;" value="1">
+          </p>
+
+          <p><label style="color: white">URG_FLAG</label></p>
+          <p><input type="text" name="URG_FLAG" required style="
+                        width: 40%;
+                        padding: 12px 20px;
+                        margin: 0px 0px;
+                        display: inline-block;
+                        border-radius: 40px;
+                        box-sizing: border-box;" value="0">
+          </p>
+          <br>
+          <br>
+          <p><button class="buttons button1" type="submit">PREDICTIONS</button>
+      </div>
+      </form>
+      <div id="prediction-result" style="display: none; margin-top: 20px;">
+        <h4 id="prediction-text"></h4>
+        <p id="prevention-text"></p>
+        <img id="result-image" src="" alt="Result Image" style="max-width: 50%; margin: 10px 0;">
+        <img id="prevention-image" src="" alt="Prevention Diagram" style="max-width: 50%; margin: 10px 0;">
+    </div>
+  </body>
+
+  </html>
+
+</body>
+
+</html>

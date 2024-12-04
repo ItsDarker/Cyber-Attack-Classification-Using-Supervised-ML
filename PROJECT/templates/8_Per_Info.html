@@ -1,0 +1,345 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+                body { margin:1;
+                    
+                    font-family: helvetica;
+                    font-weight: 500;
+                    font-size: 22px;
+                    text-decoration: capitalize;
+                    background-color:#bba8e3;
+                    background:linear-gradient(to right, #e1d9d1, #ab8980);
+                
+                }
+
+                h1{
+                font-size: 30px;
+                }
+                input[type=text]
+                {
+                width: 550px;
+                height:28px;
+                font-size:100%;
+                padding:8px;
+                margin:4px;
+                border-top:0px solid black;
+                border-bottom: 2px solid black;
+                outline: none;
+                background:#e1d9d1;
+
+                }
+                input[type=checkbox] 
+                {
+                    width: 100px;
+                    height: 15px;
+                    padding-left: 20px;
+                    cursor:pointer;
+                    gap:0.5em;
+                    font: inherit;
+                    text-align:left;
+                    font-size: 100px;
+                    background:#e1d9d1;
+                    accent-color: black;
+
+
+                }
+                input[type=textarea] { 
+                        width: 415px;
+                        height: 45px;
+                        outline:none;
+                        text-align: left;
+                        border-top: 0px solid black;
+                        border-bottom: 1px solid black;
+                        text-align: left;
+                        background :#e1d9d1;
+                        font-size: 18px;
+                            
+                }
+                    
+                .dropdown{
+                width: 400px;
+                outline: none;
+                }
+                select{ 
+                    text-align: left;
+                    appearance: none;
+                    outline: 0;
+                    background: #e1d9d1;
+                    background-image: none;
+                    width: 470px;
+                    height:46px;
+                    color: black;
+                    cursor: pointer;
+                    border-top: 0px solid black;
+                    border-bottom:1px solid black;
+                    font-size: 18px;
+                }
+                .space{
+                margin-top: 16px;
+                margin-bottom: 10px;
+                }
+                .gender{
+                margin-top: 7%;
+                margin:auto;
+                width: 50%;
+                
+                }
+                .drop-down{ margin-top: 20px;
+                
+                }
+                input[type=email] {
+                width: 580px;
+                height: 42px;
+                border-top: 0px solid black;
+                border-bottom: 2px solid black;
+                background:#e1d9d1;
+                font-size: 16px;
+                outline: none;
+                }
+                input[type=tel] {
+                width: 570px;
+                height: 45px;
+                border-top: 0px solid black;
+                    border-bottom: 2px solid black;
+                    background:#e1d9d1;
+                    font-size: 16px;
+                    outline: none;
+                }
+                input[type=submit] {
+                color: #fef0e3;
+                width: 100px;
+                height: 40px;
+                padding:5px 15px; 
+                border-radius:50%;
+                border-style: outset;
+                cursor:pointer;
+                -webkit-border-radius: 5px;
+                border-radius: 7%; 
+                background:linear-gradient( #ffffff,#000000,#000000);
+                border-color:#e1d9d1;
+                }
+                article {
+                font-size: 19px;
+                font-family: arial,sans;
+                border-color: #e1d9d1;
+                margin-top: 8px;
+                
+                }
+                u {
+                color:black ;
+                font-size: 19px;
+                font-weight:700;
+                border-spacing: 2px;
+                
+                }
+                .head{
+                text-transform:capitalize;
+                margin:auto;
+                width:50%;
+                }
+                    </style>
+                </head>
+                <body>
+                    
+                    <title>Page Title</title>
+                    <style>
+                        body { margin:1;
+                    
+                    font-family: helvetica;
+                    font-weight: 500;
+                    font-size: 22px;
+                    text-decoration: capitalize;
+                    background-color:#7bc5c5;
+                    background:linear-gradient(to right, #8a9bca, #968bbe);
+                
+                }
+
+                h1{
+                font-size: 30px;
+                }
+                input[type=text]
+                {
+                width: 550px;
+                height:28px;
+                font-size:100%;
+                padding:8px;
+                margin:4px;
+                border-top:0px solid black;
+                border-bottom: 2px solid black;
+                outline: none;
+                background:#e1d9d1;
+
+                }
+                input[type=checkbox] 
+                {
+                    width: 100px;
+                    height: 15px;
+                    padding-left: 20px;
+                    cursor:pointer;
+                    gap:0.5em;
+                    font: inherit;
+                    text-align:left;
+                    font-size: 100px;
+                    background:#e1d9d1;
+                    accent-color: black;
+
+
+                }
+                input[type=textarea] { 
+                        width: 415px;
+                        height: 45px;
+                        outline:none;
+                        text-align: left;
+                        border-top: 0px solid black;
+                        border-bottom: 1px solid black;
+                        text-align: left;
+                        background :#e1d9d1;
+                        font-size: 18px;
+                            
+                }
+                    
+                .dropdown{
+                width: 400px;
+                outline: none;
+                }
+                select{ 
+                    text-align: left;
+                    appearance: none;
+                    outline: 0;
+                    background: #e1d9d1;
+                    background-image: none;
+                    width: 470px;
+                    height:46px;
+                    color: black;
+                    cursor: pointer;
+                    border-top: 0px solid black;
+                    border-bottom:1px solid black;
+                    font-size: 18px;
+                }
+                .space{
+                margin-top: 16px;
+                margin-bottom: 10px;
+                }
+                .gender{
+                margin-top: 7%;
+                margin:auto;
+                width: 50%;
+                
+                }
+                .drop-down{ margin-top: 20px;
+                
+                }
+                input[type=email] {
+                width: 580px;
+                height: 42px;
+                border-top: 0px solid black;
+                border-bottom: 2px solid black;
+                background:#e1d9d1;
+                font-size: 16px;
+                outline: none;
+                }
+                input[type=tel] {
+                width: 570px;
+                height: 45px;
+                border-top: 0px solid black;
+                    border-bottom: 2px solid black;
+                    background:#e1d9d1;
+                    font-size: 16px;
+                    outline: none;
+                }
+                input[type=submit] {
+                color: #fef0e3;
+                width: 100px;
+                height: 40px;
+                padding:5px 15px; 
+                border-radius:50%;
+                border-style: outset;
+                cursor:pointer;
+                -webkit-border-radius: 5px;
+                border-radius: 7%; 
+                background:linear-gradient( #ffffff,#000000,#000000);
+                border-color:#e1d9d1;
+                }
+                article {
+                font-size: 19px;
+                font-family: arial,sans;
+                border-color: #e1d9d1;
+                margin-top: 8px;
+                
+                }
+                u {
+                color:black ;
+                font-size: 19px;
+                font-weight:700;
+                border-spacing: 2px;
+                
+                }
+                .head{
+                text-transform:capitalize;
+                margin:auto;
+                width:50%;
+                }
+    </style>
+</head>
+<body>
+
+<center>
+<h1><div class="head"><h1>PERSONAL INFORMATION </h1></center>
+    <center>
+        <h3><a href="{% url 'Home_4' %}">HOME</a></h3>
+    </center>
+
+
+<form method='POST' action="{% url 'Per_Info_8' %}">
+    {% csrf_token %}
+    
+    <center>
+      <label>FIRST_NAME</label> <br>
+      <input type="text" name="firstname" placeholder="FIRST_NAME" required><br><br>
+
+      <label>LAST_NAME</label><br>
+      <input type="text" name="lastname" placeholder="LAST_NAME" required><br><br>
+
+      <label>AGE</label><br>
+      <input type="text" name="age" placeholder="AGE" required><br><br>
+
+      <label>ADDRESS</label><br>
+      <input type="text" name="address" placeholder="ADDRESS" required><br><br>
+
+      <label>PHONE_NUMBER</label><br>
+      <input type="text" name="phone" placeholder="PHONE_NUMBER" required><br><br>
+
+      <label>CITY</label><br>
+      <input type="text" name="city" placeholder="CITY" required><br><br>
+
+      <label>STATE</label><br>
+      <input type="text" name="state" placeholder="STATE" required><br><br>
+
+      <label>NATIONALITY</label><br>
+      <input type="text" name="country" placeholder="NATIONALITY" required><br><br>
+
+      <center>
+        <input type="submit">
+      </center>
+    
+
+     
+
+
+    </center>
+</form>
+
+
+
+
+
+
+
+</body>
+</html>

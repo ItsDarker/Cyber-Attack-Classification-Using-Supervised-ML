@@ -1,0 +1,206 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap');
+
+        * {
+          box-sizing: border-box;
+        }
+
+        body {
+          background: #EECDA3;
+          background: -webkit-linear-gradient(to top, #b39e90, #508bd3);
+          background: linear-gradient(to top, #6163e4, #6ed6dd);
+          font-family: 'Montserrat', sans-serif;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          margin: 0;
+          min-height: 100vh;
+          overflow: hidden;
+        }
+
+        .container {
+          background-color: #ffffff;
+          -webkit-box-shadow: 10px 10px 15px 0px rgba(0,0,0,0.75);
+          -moz-box-shadow: 10px 10px 15px 0px rgba(0,0,0,0.75);
+          box-shadow: 10px 10px 15px 0px rgba(0,0,0,0.75);
+          height: 90vh;
+          width: 90vw;
+          margin: auto;
+          display: flex;
+          transition: transform 0.3s ease-in-out;
+        }
+
+        .container:hover {
+          transform: scale(1.03);
+        }
+
+        .header {
+          background-color: #616161;
+          color: #ffffff;
+          display: flex;
+          flex: 3;
+          flex-direction: column;
+          justify-content: space-evenly;
+          padding: 3%;
+          transition: background-color 0.3s ease;
+        }
+
+        .header:hover {
+          background-color: #484848;
+        }
+
+        .header h1 {
+          position: relative;
+          animation: fadeInDown 1s;
+        }
+
+        .header h1::after {
+          background-color: #EECDA3;
+          content: '';
+          position: absolute;
+          bottom: -10px;
+          left: 0;
+          height: 6px;
+          width: 30%;
+        }
+
+        .author {
+          display: flex;
+          align-items: center;
+        }
+
+        .author img {
+          border-radius: 50%;
+          box-shadow: 10px 8px 5px 0px rgba(0,0,0,0.63);
+          -webkit-box-shadow: 10px 8px 5px 0px rgba(0,0,0,0.63);
+          -moz-box-shadow: 10px 8px 5px 0px rgba(0,0,0,0.63);
+          margin-right: 5%;
+          height: 100px;
+          transition: transform 0.5s ease;
+        }
+
+        .author img:hover {
+          transform: rotate(360deg);
+        }
+
+        .content {
+          background-color: #ffffff;
+          flex: 4;
+          padding: 1% 2% 3% 2%;
+          position: relative;
+        }
+
+        .text {
+          overflow: auto;
+          height: 100%;
+          color: #616161;
+        }
+
+        .text h2::first-letter {
+          font-size: 200%;
+          font-weight: bold;
+        }
+
+        .text h2 {
+          animation: fadeIn 1.5s;
+        }
+
+        .text h3 {
+          margin: 15px 0;
+          position: relative;
+          animation: slideIn 1s;
+        }
+
+        .text h3::before {
+          content: '\f111';
+          font-family: 'FontAwesome';
+          color: #6ed6dd;
+          margin-right: 10px;
+        }
+
+        .info {
+          background-color: #ffffff;
+          padding: 2%;
+          position: absolute;
+          width: 100%;
+          bottom: 0;
+          left: 0;
+        }
+
+        .info a {
+          color: #464646;
+          text-decoration: none;
+          font-weight: bold;
+          transition: color 0.3s ease;
+        }
+
+        .info a:hover {
+          color: #6163e4;
+        }
+
+        @keyframes fadeIn {
+          from { opacity: 0; }
+          to { opacity: 1; }
+        }
+
+        @keyframes fadeInDown {
+          from { opacity: 0; transform: translateY(-50px); }
+          to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes slideIn {
+          from { opacity: 0; transform: translateX(-50px); }
+          to { opacity: 1; transform: translateX(0); }
+        }
+
+        @media screen and (max-width: 800px) {
+          .container {
+            flex-direction: column;
+            height: auto;
+          }
+        }
+  </style>
+</head>
+<body> 
+  <div class="container">
+    <div class="header">
+      <h1>RESULT AND DOMAIN</h1>
+      <div class="author">
+        <img src="/static/images/S3.jpg">
+        <p>PROJECT</p>
+      </div>
+    </div>
+
+    <div class="content">
+      <div class="text">
+        <h2>DOMAIN AND RESULTS</h2>
+        <h3>  Datascience and Artificial Intelligence</h3>
+
+        <h2>TECHNOLOGY</h2>
+        <h3>  Machine Learning</h3>
+
+        <h2>ALGORITHMS</h2>
+        <h3>  Gausian Naive Bayes Classifier Algorithm</h3>
+        <h3>  Ada Boost Classifier Algorithm</h3>
+        <h3>  Random Forest Classifier Algorithm</h3>
+
+        <h2>RESULTS</h2>
+        <h3>  The Accuracy Result Of Random Forest Classifier is 99.99 %</h3>
+        <h3>  The Loss Result Of Random Forest Classifier is 0.01 %</h3>
+        <h3>  The Accuracy Result Of Random Forest Classifier is 98.00 %</h3>
+        <h3>  The Loss Result Of Random Forest Classifier is 2.00 %</h3>
+      </div>
+      <div class="info">
+        <a href="" target="_blank"> Continue Reading...</a>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

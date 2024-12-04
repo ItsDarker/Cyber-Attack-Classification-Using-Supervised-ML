@@ -1,0 +1,211 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            padding: 0;
+            margin: 0;
+            font-family: 'IBM Plex Serif',Serif;
+            background: #89bdb8;
+            overflow-x: hidden;
+        }
+        h1, h2, h3 {
+            margin: 0;
+            font-family: 'IBM Plex Sans', Serif;
+        }
+        p {
+            margin: 0;
+            font-size: 18px;
+            line-height: 24px;
+        }
+        a {
+            color: #005eeb;
+            transition: color 0.3s ease;
+        }
+        a:hover {
+            color: #ffb200;
+        }
+        .teamWrapper {
+            margin-top: 50px;
+            animation: fadeIn 1.5s ease;
+        }
+        .container {
+            --container: 1160px;
+            max-width: var(--container);
+            margin: auto;
+        }
+        .teamGrid {
+            display: grid;
+            grid-template-columns: 32.33% 32.33% 32.33%;
+            column-gap: 1.5%;
+            margin-top: 100px;
+            animation: fadeInUp 1.5s ease;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .avatar {
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: -80px;
+            text-align: center;
+        }
+        .teamcolinner {
+            position: relative;
+        }
+        .avatar > img {
+            width: 150px;
+            margin: auto;
+            border-radius: 50%;
+            border: 1px solid rgb(170 170 173/ 1);
+            box-shadow: 0px 3px 10px 3px rgb(170 170 173 / 0.5);
+            transition: transform 0.5s ease-in-out;
+        }
+        .avatar img:hover {
+            transform: scale(1.1);
+        }
+        .teamcolinner {
+            position: relative;
+            border: 1px dashed #ddd;
+            min-height: 100px;
+            background: #fff;
+            z-index: 9;
+            transition: transform 0.5s ease;
+        }
+        .teamcolinner:hover {
+            transform: translateY(-10px);
+            box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.15);
+        }
+        .teamcol {
+            padding: 15px;
+            background: #fff;
+            border-radius: 10px;
+            position: relative;
+            transition: transform 1s ease-in-out;
+        }
+        .teamcol:hover {
+            transform: translateY(-30px);
+            box-shadow: 0px 3px 10px 3px rgb(170 170 173 / 0.5);
+            transition: transform 1s ease-in-out;
+        }
+        .teamcol:before {
+            content: "";
+            width: 50%;
+            height: 50%;
+            position: absolute;
+            right: 0;
+            top: 0;
+            background: -webkit-linear-gradient(#ffbf00, #ffa000);
+            border-top-right-radius: 10px;
+            transition: width 1s ease-in-out;
+        }
+        .teamcol:after {
+            content: "";
+            width: 50%;
+            height: 50%;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            background: -webkit-linear-gradient(#0052cc, #005fec);
+            border-bottom-left-radius: 10px;
+            transition: width 1s ease-in-out;
+        }
+        .teamcol:hover::before, .teamcol:hover::after {
+            width: 100%;
+            transition: width 1s ease-in-out;
+        }
+        .member-name {
+            margin-top: 80px;
+            animation: slideIn 1.5s ease;
+        }
+        .member-info {
+            padding: 10px 20px;
+        }
+        .social-listing {
+            align-items: center;
+            justify-content: center;
+            display: flex;
+            list-style: none;
+            padding: 0;
+            animation: fadeIn 2s ease;
+        }
+        .social-listing > li {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 30px;
+            height: 30px;
+            background: #f4f5f7;
+            border-radius: 50%;
+            margin: 5px;
+            transition: transform 0.3s ease;
+        }
+        .social-listing > li:hover {
+            transform: scale(1.2);
+        }
+    </style>
+</head>
+<body>
+    <head>
+        <meta charset="utf-8">
+        <title>Team</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500&family=IBM+Plex+Serif:wght@300;400&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+    <body>
+        <div class="teamWrapper">
+            <div class="container">
+                <h1 align="center">INNOVATION SQUAD</h1>
+                <p align="center">THE MACHINE LEARNING PROJECT</p>
+                <div class="teamGrid">
+                    <div class="colmun">
+                        <div class="teamcol">
+                            <div class="teamcolinner">
+                                <div class="avatar"><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjxivAs4UknzmDfLBXGMxQkayiZDhR2ftB4jcIV7LEnIEStiUyMygioZnbLXCAND-I_xWQpVp0jv-dv9NVNbuKn4sNpXYtLIJk2-IOdWQNpC2Ldapnljifu0pnQqAWU848Ja4lT9ugQex-nwECEh3a96GXwiRXlnGEE6FFF_tKm66IGe3fzmLaVIoNL/s1600/img_avatar.png" alt="Member"></div>
+                                <div class="member-name"> <h2 align="center">FINO FRANKLIN JOHN BOSCO</h2> </div>
+                                <div class="member-info"><p align="center"></p></div>
+                                <div class="member-mail"> <p align="center"> <a href="mailto:@gmail.com">finofranklin@gmail.com</a> </p> </div>
+                                <div class="member-social"> 
+                                    <ul class="social-listing">
+                                        <!-- <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-twitter"></i></a></li> -->
+                                    </ul> 
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="colmun">
+                        <div class="teamcol">
+                            <div class="teamcolinner">
+                                <div class="avatar"><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjxivAs4UknzmDfLBXGMxQkayiZDhR2ftB4jcIV7LEnIEStiUyMygioZnbLXCAND-I_xWQpVp0jv-dv9NVNbuKn4sNpXYtLIJk2-IOdWQNpC2Ldapnljifu0pnQqAWU848Ja4lT9ugQex-nwECEh3a96GXwiRXlnGEE6FFF_tKm66IGe3fzmLaVIoNL/s1600/img_avatar.png" alt="Member"></div>
+                                <div class="member-name"> <h2 align="center">KOUSHIK ANAND</h2> </div>
+                                <div class="member-info"><p align="center"></p></div>
+                                <div class="member-mail"> <p align="center"> <a href="mailto:@gmail.com">koushikanand77@gmail.com</a> </p> </div>
+                                <div class="member-social"> 
+                                    <ul class="social-listing">
+                                        <!-- <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-twitter"></i></a></li> -->
+                                    </ul> 
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>  
+        </div>
+    </body>
+</body>
+</html>
