@@ -13,7 +13,6 @@ This project focuses on developing a machine learning-based system to classify n
 - [Results](#results)
 - [Future Work](#future-work)
 - [Contributing](#contributing)
-- [License](#license)
 - [Acknowledgements](#acknowledgements)
 
 ## Introduction
